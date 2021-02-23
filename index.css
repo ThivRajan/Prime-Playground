@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap');
+
+body {
+	font-family: Open Sans;
+}
+
+h1 {
+	text-align: center;
+}
+
+.button-row button {
+	box-sizing: border-box;
+	width: 100px;
+	height: 40px;
+	border-radius: 5%;
+	font-size: 15px;
+	padding: 10px;
+	transition: background 250ms, filter 250ms;
+}
+
+.button-row:hover button {
+	cursor: pointer;
+}
+
+.button-row {
+	margin-bottom: 10px;
+}
+
+:root {
+	--success: #31a831;
+	--warn: #f7c53b;
+	--error: #d94343
+}
+
+.success {
+	background: var(--success);
+}
+
+.warn {
+	background: var(--warn);
+}
+
+.error {
+	background: var(--error);
+}
+
+.plain-btn {
+	color: white;
+	border: none;
+}
+
+.plain-btn:active {
+	filter: brightness(90%);
+}
+
+.raised-btn {
+	color: black;
+	border: none;
+	box-shadow: 0px 1.5px 2px #a3a3a3;
+}
+
+.raised-btn:active {
+	filter: brightness(95%);
+}
+
+.empty-btn {
+	background: none;
+}
+
+#success-empty {
+	color: var(--success);
+	border: 1px solid var(--success);
+}
+
+#success-empty:hover {
+	background: #e4f5e4;
+	color: var(--success);
+}
+
+#success-empty:active {
+	background: var(--success);
+	color: white;
+}
+
+#warn-empty {
+	color: var(--warn);
+	border: 1px solid var(--warn);
+}
+
+#warn-empty:hover {
+	background: #fcf7eb;
+	color: var(--warn);
+}
+
+#warn-empty:active {
+	background: var(--warn);
+	color: white;
+}
+
+#error-empty {
+	color: var(--error);
+	border: 1px solid var(--error);
+}
+
+#error-empty:hover {
+	background: #ffe8e8;
+	color: var(--error);
+}
+
+#error-empty:active {
+	background: var(--error);
+	color: white;
+}
