@@ -8,6 +8,12 @@ h1 {
 	text-align: center;
 }
 
+.button-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
 .button-row button {
 	box-sizing: border-box;
 	width: 100px;
@@ -28,8 +34,11 @@ h1 {
 
 :root {
 	--success: #31a831;
+	--success-light: #e4f5e4;
 	--warn: #f7c53b;
-	--error: #d94343
+	--warn-light: #fcf7eb;
+	--error: #d94343;
+	--error-light: #ffe8e8;
 }
 
 .success {
@@ -60,54 +69,20 @@ h1 {
 }
 
 .raised-btn:active {
-	filter: brightness(95%);
+	filter: brightness(90%);
 }
 
 .empty-btn {
 	background: none;
+	color: var(--main);
+	border: 1px solid var(--main);
 }
 
-#success-empty {
-	color: var(--success);
-	border: 1px solid var(--success);
+.empty-btn:hover {
+	background: var(--light);
 }
 
-#success-empty:hover {
-	background: #e4f5e4;
-	color: var(--success);
-}
-
-#success-empty:active {
-	background: var(--success);
-	color: white;
-}
-
-#warn-empty {
-	color: var(--warn);
-	border: 1px solid var(--warn);
-}
-
-#warn-empty:hover {
-	background: #fcf7eb;
-	color: var(--warn);
-}
-
-#warn-empty:active {
-	background: var(--warn);
-	color: white;
-}
-
-#error-empty {
-	color: var(--error);
-	border: 1px solid var(--error);
-}
-
-#error-empty:hover {
-	background: #ffe8e8;
-	color: var(--error);
-}
-
-#error-empty:active {
-	background: var(--error);
+.empty-btn:active {
+	background: var(--main);
 	color: white;
 }

@@ -10,7 +10,7 @@
 <body>
 	<h1>CSS Playground</h1>
 	
-	<div class="buttons-container">
+	<div class="button-container">
 		<h2>Buttons</h2>
 		<div class="button-row">	
 			<button class="plain-btn success">Success</button>
@@ -23,9 +23,26 @@
 			<button class="raised-btn error">Error</button>
 		</div>
 		<div class="button-row">	
-			<button class="empty-btn" id="success-empty">Success</button>
-			<button class="empty-btn" id="warn-empty">Warning</button>
-			<button class="empty-btn" id="error-empty">Error</button>
+			<button 
+				class="empty-btn" 
+				style="--main: var(--success); --light: var(--success-light)"
+			>
+				Success
+			</button>
+
+			<button 
+				class="empty-btn" 
+				style="--main: var(--warn); --light: var(--warn-light)"
+			>
+				Warning
+			</button>
+
+			<button 
+				class="empty-btn" 
+				style="--main: var(--error); --light: var(--error-light)"
+			>
+				Error
+			</button>
 		</div>
 		
 	</div>
