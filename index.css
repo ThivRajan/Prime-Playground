@@ -11,6 +11,13 @@ h1 {
 /* Buttons Container Styles */
 
 .buttons-container {
+	--success: #31a831;
+	--success-light: #e4f5e4;
+	--warn: #f7c53b;
+	--warn-light: #fcf7eb;
+	--error: #d94343;
+	--error-light: #ffe8e8;
+
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -32,15 +39,6 @@ h1 {
 
 .button-row {
 	margin-bottom: 10px;
-}
-
-:root {
-	--success: #31a831;
-	--success-light: #e4f5e4;
-	--warn: #f7c53b;
-	--warn-light: #fcf7eb;
-	--error: #d94343;
-	--error-light: #ffe8e8;
 }
 
 .success {
