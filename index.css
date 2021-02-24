@@ -8,7 +8,9 @@ h1 {
 	text-align: center;
 }
 
-.button-container {
+/* Buttons Container Styles */
+
+.buttons-container {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -85,4 +87,35 @@ h1 {
 .empty-btn:active {
 	background: var(--main);
 	color: white;
+}
+
+/* Listbox Styles */
+
+#listbox {
+	--main: #e6e6e6;
+	--text: #363636;
+	--selected: #d2e7fc;
+
+	display: flex;
+	flex-direction: column;
+	border: 1px solid var(--main);
+	color: var(--text);
+	width: 200px;
+	padding: 10px 0;
+	border-radius: 2%;
+}
+
+#listbox span {
+	display: flex;
+	padding: 5px 10px;
+
+}
+
+#listbox span:hover {
+	background: var(--main);
+	cursor: pointer;
+}
+
+#listbox span:active {
+	background: var(--selected);
 }
