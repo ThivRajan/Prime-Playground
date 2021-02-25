@@ -90,16 +90,16 @@ h1 {
 /* Listbox Styles */
 
 #listbox-container {
+	--main: #e6e6e6;
+	--text: #363636;
+	--selected: #d2e7fc;
+
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 
 #listbox {
-	--main: #e6e6e6;
-	--text: #363636;
-	--selected: #d2e7fc;
-
 	display: flex;
 	flex-direction: column;
 	border: 1px solid var(--main);
@@ -112,7 +112,6 @@ h1 {
 #listbox span {
 	display: flex;
 	padding: 5px 10px;
-
 }
 
 #listbox span:hover {
