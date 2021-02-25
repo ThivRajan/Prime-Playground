@@ -10,7 +10,7 @@ h1 {
 
 /* Buttons Container Styles */
 
-.buttons-container {
+#buttons-container {
 	--success: #31a831;
 	--success-light: #e4f5e4;
 	--warn: #f7c53b;
@@ -88,6 +88,12 @@ h1 {
 }
 
 /* Listbox Styles */
+
+#listbox-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 
 #listbox {
 	--main: #e6e6e6;
