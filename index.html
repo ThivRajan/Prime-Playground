@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>CSS Playground</title>
 	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 	<h1>CSS Playground</h1>
@@ -64,15 +65,18 @@
 			<div class="products">
 				<div class="product">
 					<div class="product-left">
-						<img src="assets/headphones.jpg">
+						<img src="assets/headphones.jpg" class="product-img">
 						<div class="product-text">
-							<h4 style="background: pink;">Headphones</h4>
-							<span style="background: pink;">Product Category</span>
+							<h4>Headphones</h4>
+							<span class="product-category">
+								<i class="fa fa-tag"></i>
+								Product Category
+							</span>
 						</div>
 					</div>
 					<div class="product-text">
 						<h4 class="price">$299</h4>
-						<span class="availability">InStock</span>
+						<span class="availability in-stock">InStock</span>
 					</div>
 				</div>
 			</div>
