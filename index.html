@@ -11,55 +11,64 @@
 <body>
 	<h1>CSS Playground</h1>
 	
-	<div id="buttons-container">
-		<h2>Buttons</h2>
-		<div class="button-row">	
-			<button class="plain-btn primary">Primary</button>
-			<button class="plain-btn secondary">Secondary</button>
-			<button class="plain-btn success">Success</button>
-			<button class="plain-btn warn">Warning</button>
-			<button class="plain-btn error">Error</button>
+	<div id="button-container">
+		<h2>Button</h2>
+		<div class="button-set">
+			<h3>Standard</h3>
+			<div class="button-row">	
+				<button class="std-btn primary">Primary</button>
+				<button class="std-btn secondary">Secondary</button>
+				<button class="std-btn success">Success</button>
+				<button class="std-btn warn">Warning</button>
+				<button class="std-btn error">Error</button>
+			</div>
 		</div>
-		<div class="button-row">	
-			<button class="raised-btn primary">Primary</button>
-			<button class="raised-btn secondary">Secondary</button>
-			<button class="raised-btn success">Success</button>
-			<button class="raised-btn warn">Warning</button>
-			<button class="raised-btn error">Error</button>
+		<div class="button-set">
+			<h3>Raised</h3>
+			<div class="button-row">	
+				<button class="raised-btn primary">Primary</button>
+				<button class="raised-btn secondary">Secondary</button>
+				<button class="raised-btn success">Success</button>
+				<button class="raised-btn warn">Warning</button>
+				<button class="raised-btn error">Error</button>
+			</div>
 		</div>
-		<div class="button-row">	
-			<button 
-				class="empty-btn" 
-				style="--main: var(--primary); --light: var(--primary-light)"
-			>
-				Primary
-			</button>
-			<button 
-				class="empty-btn" 
-				style="--main: var(--secondary); --light: var(--secondary-light)"
-			>
-				Secondary
-			</button>
-			<button 
-				class="empty-btn" 
-				style="--main: var(--success); --light: var(--success-light)"
-			>
-				Success
-			</button>
+		<div class="button-set">
+			<h3>Outined</h3>
+			<div class="button-row">	
+				<button 
+					class="outlined-btn" 
+					style="--main: var(--primary); --light: var(--primary-light)"
+				>
+					Primary
+				</button>
+				<button 
+					class="outlined-btn" 
+					style="--main: var(--secondary); --light: var(--secondary-light)"
+				>
+					Secondary
+				</button>
+				<button 
+					class="outlined-btn" 
+					style="--main: var(--success); --light: var(--success-light)"
+				>
+					Success
+				</button>
 
-			<button 
-				class="empty-btn" 
-				style="--main: var(--warn); --light: var(--warn-light)"
-			>
-				Warning
-			</button>
+				<button 
+					class="outlined-btn" 
+					style="--main: var(--warn); --light: var(--warn-light)"
+				>
+					Warning
+				</button>
 
-			<button 
-				class="empty-btn" 
-				style="--main: var(--error); --light: var(--error-light)"
-			>
-				Error
-			</button>
+				<button 
+					class="outlined-btn" 
+					style="--main: var(--error); --light: var(--error-light)"
+				>
+					Error
+				</button>
+			</div>
 		</div>
 	</div>
 
