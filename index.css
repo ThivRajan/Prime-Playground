@@ -227,7 +227,7 @@ h1 {
 .fs {
 	color: var(--main-text);
 	width: 80%;
-	max-width: 800px;
+	max-width: 1200px;
 	flex: column;
 }
 
@@ -254,4 +254,34 @@ h1 {
 	font-weight: 400;
 }
 
+.sp {
+	display: flex;
+}
+
+.sp-section {
+	height: 200px;
+	overflow-y: auto;
+	margin-right: 25px;
+	padding-right: 10px;
+}
+
+#styled-scrollbar::-webkit-scrollbar-track {
+	background-color: white;
+}
+
+#styled-scrollbar::-webkit-scrollbar {
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+#styled-scrollbar::-webkit-scrollbar-thumb {
+	border-radius: 3px;
+	background-color: #2196F3;
+}
+
+#no-scrollbar::-webkit-scrollbar {
+	display: none;
+}
+
 /* TODO: consider making a container class */
+/* TODO: add space between titles & content */
