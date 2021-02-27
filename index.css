@@ -11,13 +11,16 @@ h1 {
 /* Buttons Container Styles */
 
 #buttons-container {
+	--primary: #2196F3;
+	--primary-light: #f2f9ff;
+	--secondary: #607D8B;
+	--secondary-light: #f7fcff;
 	--success: #31a831;
-	--success-light: #e4f5e4;
+	--success-light: #f7fff7;
 	--warn: #f7c53b;
-	--warn-light: #fcf7eb;
+	--warn-light: #fffcf5;
 	--error: #d94343;
-	--error-light: #ffe8e8;
-	--shadow: #a3a3a3;
+	--error-light: #fff2f2;
 
 	display: flex;
 	flex-direction: column;
@@ -42,12 +45,22 @@ h1 {
 	margin-bottom: 10px;
 }
 
+.primary {
+	background: var(--primary);
+}
+
+.secondary {
+	background: var(--secondary);
+}
+
 .success {
 	background: var(--success);
 }
 
-.warn {
+.plain-btn.warn,
+.raised-btn.warn {
 	background: var(--warn);
+	color: black;
 }
 
 .error {
@@ -64,7 +77,7 @@ h1 {
 }
 
 .raised-btn {
-	color: black;
+	color: white;
 	border: none;
 	box-shadow: 0px 1.5px 2px var(--shadow);
 }
