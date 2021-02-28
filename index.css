@@ -75,6 +75,10 @@ h1 {
 	margin-bottom: 10px;
 }
 
+.button-row button {
+	text-transform: capitalize;
+}
+
 .primary {
 	background: var(--primary);
 }
