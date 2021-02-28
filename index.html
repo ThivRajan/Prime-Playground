@@ -65,23 +65,38 @@
 		<h2>Virtual Scroller</h2>
 		<div class="vs-content">
 			<div class="vs-header">List of Products</div>
-			<div class="products">
-				<div class="product">
-					<div class="product-left">
-						<img src="assets/headphones.jpg" class="product-img">
+			<div 
+				class="products"
+				x-data="{ 
+					products: [
+						{ 
+							name: 'Headphones', 
+							availability: 'instock', 
+							price: '$299',
+							img: 'headphones'
+						}
+					]
+				}"
+			>
+				<template x-for="product in products">
+					<div class="product">
+						<div class="product-left">
+							<img :src="`assets/${product.img}.jpg`" class="product-img">
+							<div class="product-text">
+								<h4 x-text="product.name"></h4>
+								<span class="product-category">
+									<i class="fa fa-tag"></i>
+									Product Category
+								</span>
+							</div>
+						</div>
 						<div class="product-text">
-							<h4>Headphones</h4>
-							<span class="product-category">
-								<i class="fa fa-tag"></i>
-								Product Category
+							<h4 class="price" x-text="product.price"></h4>
+							<span class="availability in-stock" x-text="product.availability">
 							</span>
 						</div>
 					</div>
-					<div class="product-text">
-						<h4 class="price">$299</h4>
-						<span class="availability in-stock">InStock</span>
-					</div>
-				</div>
+				</template>
 			</div>
 		</div>	
 	</div>
