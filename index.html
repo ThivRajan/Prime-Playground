@@ -50,12 +50,13 @@
 
 	<div class="container" id="listbox-container">
 		<h2>Listbox</h2>
-		<div id="listbox">
-			<span>New York</span>
-			<span>Rome</span>
-			<span>London</span>
-			<span>Paris</span>
-			<span>Istanbul</span>
+		<div 
+			id="listbox" 
+			x-data=" { countries: ['New York', 'Rome', 'London', 'Paris', 'Istanbul'] } "
+		>
+			<template x-for="country in countries" :key="country">
+				<span x-text="country"></span>
+			</template>
 		</div>
 	</div>
 
