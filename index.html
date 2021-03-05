@@ -81,15 +81,21 @@
 
 	<div>
 		<div class="container" id="fs-sp-container" 
-			x-data="{ scrollTypes: ['semi-visible', 'styled', 'invisible'] }"
+			x-data="{ 
+				isOpen: true,
+				scrollTypes: ['semi-visible', 'styled', 'invisible'] 
+			}"
 		>
 			<h2>Fieldset Scrollpanel</h2>
 			<div class="fs">
 				<div class="fs-header">
-					<h3>Header</h3>
+					<button x-on:click="isOpen = !isOpen">
+						<i :class="`fa ${isOpen ? 'fa-minus' : 'fa-plus'}`"></i>
+						Header
+					</button>
 				</div>
 				<div class="fs-content">
-					<div class="sp">
+					<div class="sp" x-show.transition.origin.top="isOpen">
 						<template x-for="type in scrollTypes" :key="type">
 							<div class="sp-section" :id="`${type}-sb`">
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed 

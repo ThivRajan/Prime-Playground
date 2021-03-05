@@ -253,7 +253,7 @@ h1 {
 	display: flex;
 }
 
-.fs-header h3 {
+.fs-header button {
 	background: var(--header);
 	padding: 13px;
 	border: 1px solid var(--main);
@@ -263,6 +263,10 @@ h1 {
 	font-size: 15px;
 	font-weight: 600;
 	transform: translateX(25px) translateY(-28px);
+}
+
+.fs-header button:hover {
+	cursor: pointer;
 }
 
 .fs-content {
