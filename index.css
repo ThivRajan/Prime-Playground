@@ -175,6 +175,10 @@ h1 {
 	--header: #f8f9fa;
 	--in-stock: #c8e6c9;
 	--in-stock-text: #256029;
+	--low-stock: #feedaf;
+	--low-stock-text: #8a5340;
+	--out-of-stock: #ffcdd2;
+	--out-of-stock-text: #c63737;
 }
 
 .vs-content {
@@ -208,7 +212,7 @@ h1 {
 	object-fit: contain;
 
 	/* required because of stretching on safari */
-	max-width: 120px;
+	max-width: 105px;
 	height: 100%;
 
 	margin-right: 10px;
@@ -243,13 +247,10 @@ h1 {
 .availability {
 	text-transform: uppercase;
 	font-size: 13px;
-	padding: 5px;
+	padding: 3px 6px;
 	border-radius: 1.5px;
-}
-
-.in-stock {
-	background: var(--in-stock);
-	color: var(--in-stock-text);
+	background: var(--bg);
+	color: var(--text);
 }
 
 /* Fieldset Scrollpanel Styles */

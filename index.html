@@ -60,7 +60,6 @@
 		</div>
 	</div>
 
-	<!-- TODO: add more products -->
 	<div class="container" id="vs-container">
 		<h2>Virtual Scroller</h2>
 		<div class="vs-content">
@@ -71,9 +70,38 @@
 					products: [
 						{ 
 							name: 'Headphones', 
-							availability: 'instock', 
+							availability: 'in-stock', 
+							category: 'Electronics',
 							price: '$299',
-							img: 'headphones'
+							img: 'headphones',
+						},
+						{ 
+							name: 'Black Watch', 
+							availability: 'low-stock', 
+							category: 'Accessory',
+							price: '$133',
+							img: 'black-watch'
+						},
+						{ 
+							name: 'Galaxy Earrings', 
+							availability: 'out-of-stock', 
+							category: 'Accessory',
+							price: '$230',
+							img: 'galaxy-earrings'
+						},
+						{ 
+							name: 'Shoes', 
+							availability: 'in-stock',
+							category: 'Apparel', 
+							price: '$257',
+							img: 'shoes'
+						},
+						{ 
+							name: 'Purple Gemstone Necklace', 
+							availability: 'low-stock',
+							category: 'Accessory', 
+							price: '$158',
+							img: 'purple-gemstone-necklace'
 						}
 					]
 				}"
@@ -86,14 +114,19 @@
 								<h4 x-text="product.name"></h4>
 								<span class="product-category">
 									<i class="fa fa-tag"></i>
-									Product Category
+									<span x-text="product.category"></span>
 								</span>
 							</div>
 						</div>
 						<div class="product-text">
 							<h4 class="price" x-text="product.price"></h4>
-							<span class="availability in-stock" x-text="product.availability">
-							</span>
+							<span class="availability" 
+								:style="`
+									--bg: var(--${product.availability}); 
+									--text: var(--${product.availability}-text)
+								`"
+								x-text="product.availability.replace(/-/g, '')"
+							></span>
 						</div>
 					</div>
 				</template>
