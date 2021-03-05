@@ -33,6 +33,7 @@ h1 {
 
 .button-set h3 {
 	margin-bottom: 10px;
+	text-transform: capitalize;
 }
 
 .button-row {
@@ -79,59 +80,34 @@ h1 {
 	text-transform: capitalize;
 }
 
-.primary {
-	background: var(--primary);
-}
-
-.secondary {
-	background: var(--secondary);
-}
-
-.success {
-	background: var(--success);
-}
-
-.std-btn.warn,
-.raised-btn.warn {
-	background: var(--warn);
-	color: black;
-}
-
-.error {
-	background: var(--error);
-}
-
-.std-btn {
-	color: white;
-	border: none;
-}
-
-.std-btn:active {
-	filter: brightness(90%);
-}
-
+.standard-btn,
 .raised-btn {
-	color: white;
 	border: none;
-	box-shadow: 0px 1.5px 2px #a3a3a3;
+	background: var(--bg);
+	color: var(--text);
 }
 
+.standard-btn:active,
 .raised-btn:active {
 	filter: brightness(90%);
 }
 
+.raised-btn {
+	box-shadow: 0px 1.5px 2px #a3a3a3;
+}
+
 .outlined-btn {
 	background: none;
-	color: var(--main);
-	border: 1px solid var(--main);
+	color: var(--bg);
+	border: 1px solid var(--bg);
 }
 
 .outlined-btn:hover {
-	background: var(--light);
+	background: var(--bg-light);
 }
 
 .outlined-btn:active {
-	background: var(--main);
+	background: var(--bg);
 	color: white;
 }
 

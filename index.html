@@ -8,45 +8,30 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<title>Prime Playground</title>
 	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.1/dist/alpine.min.js" defer></script>
-	<script src="index.js"></script>
+	<script src="data.js"></script>
 </head>
 <body>
 	<h1>Prime Playground</h1>
 	<div class="container" 
 		id="button-container" 
-		x-data="{ btnNames }"
+		x-data="{ btnNames, btnTypes }"
 	>
 		<h2>Button</h2>
-		<div class="button-set">
-			<h3>Standard</h3>
-			<div class="button-row">
-				<template x-for="name in btnNames" :key="name">
-					<button x-text="name" class="std-btn" :class="{ [name]: true }"></button>
-				</template>
+		<template x-for="type in btnTypes" :key="type">
+			<div class="button-set">
+				<h3 x-text="type"></h3>
+				<div class="button-row">
+					<template x-for="name in btnNames" :key="name">
+						<button x-text="name" :class="`${type}-btn`" 
+							:style="`
+								--bg: var(--${name}); 
+								--bg-light: var(--${name}-light);
+								--text: ${name === 'warn' ? 'black' : 'white'}; 
+							`"></button>
+					</template>
+				</div>
 			</div>
-		</div>
-		<div class="button-set">
-			<h3>Raised</h3>
-			<div class="button-row">	
-				<template x-for="name in btnNames" :key="name">
-					<button x-text="name" class="raised-btn" :class="{ [name]: true }"></button>
-				</template>
-			</div>
-		</div>
-		<div class="button-set">
-			<h3>Outlined</h3>
-			<div class="button-row">	
-				<template x-for="name in btnNames" :key="name">
-					<button 
-						x-text="name"
-						class="outlined-btn" 
-						:style="`--main: var(--${name}); --light: var(--${name}-light)`"
-					>
-						Primary
-					</button>
-				</template>
-			</div>
-		</div>
+		</template>
 	</div>
 
 	<div class="container" id="listbox-container">

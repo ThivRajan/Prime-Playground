@@ -1,3 +1,4 @@
+const btnTypes = ['standard', 'raised', 'outlined'];
 const btnNames = ['primary', 'secondary', 'success', 'warn', 'error'];
 
 const countries = ['New York', 'Rome', 'London', 'Paris', 'Istanbul'];
