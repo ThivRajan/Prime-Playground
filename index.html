@@ -8,12 +8,13 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<title>Prime Playground</title>
 	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.1/dist/alpine.min.js" defer></script>
+	<script src="index.js"></script>
 </head>
 <body>
 	<h1>Prime Playground</h1>
 	<div class="container" 
 		id="button-container" 
-		x-data="{ btnNames: ['primary', 'secondary', 'success', 'warn', 'error'] }"
+		x-data="{ btnNames }"
 	>
 		<h2>Button</h2>
 		<div class="button-set">
@@ -50,10 +51,7 @@
 
 	<div class="container" id="listbox-container">
 		<h2>Listbox</h2>
-		<div 
-			id="listbox" 
-			x-data=" { countries: ['New York', 'Rome', 'London', 'Paris', 'Istanbul'] } "
-		>
+		<div id="listbox" x-data="{ countries }">
 			<template x-for="country in countries" :key="country">
 				<span x-text="country"></span>
 			</template>
@@ -64,48 +62,7 @@
 		<h2>Virtual Scroller</h2>
 		<div class="vs-content">
 			<div class="vs-header">List of Products</div>
-			<div 
-				class="products"
-				x-data="{ 
-					products: [
-						{ 
-							name: 'Headphones', 
-							availability: 'in-stock', 
-							category: 'Electronics',
-							price: '$299',
-							img: 'headphones',
-						},
-						{ 
-							name: 'Black Watch', 
-							availability: 'low-stock', 
-							category: 'Accessory',
-							price: '$133',
-							img: 'black-watch'
-						},
-						{ 
-							name: 'Galaxy Earrings', 
-							availability: 'out-of-stock', 
-							category: 'Accessory',
-							price: '$230',
-							img: 'galaxy-earrings'
-						},
-						{ 
-							name: 'Shoes', 
-							availability: 'in-stock',
-							category: 'Apparel', 
-							price: '$257',
-							img: 'shoes'
-						},
-						{ 
-							name: 'Purple Gemstone Necklace', 
-							availability: 'low-stock',
-							category: 'Accessory', 
-							price: '$158',
-							img: 'purple-gemstone-necklace'
-						}
-					]
-				}"
-			>
+			<div class="products" x-data="{ products }" >
 				<template x-for="product in products">
 					<div class="product">
 						<div class="product-left">
